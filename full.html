@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated title for Full Game -->
+    <title>Lions Touchdown Hero (Full Game)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-trophy-fill"></i> Touchdown Hero</a>
+            <div>
+                <!-- Navigation links for Concept and Full Game modes -->
+                <a href="index.html" class="btn btn-outline-light btn-sm">Concept Mode</a>
+                <a href="full.html" class="btn btn-primary btn-sm">Full Game 🤖</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="input-group">
+                    <input type="text" id="username-input" class="form-control" placeholder="Enter your name...">
+                    <button class="btn btn-warning" id="start-btn">Join Game</button>
+                </div>
+            </div>
+            <div class="col-md-6 text-end"><h4 id="greeting" class="text-primary"></h4></div>
+        </div>
+
+        <div class="game-board position-relative border border-3 border-dark rounded">
+            <div id="player" class="game-piece bg-primary text-white text-center rounded-circle">🏈</div>
+            
+            <!-- Initial Defenders (Will be replaced dynamically by JS) -->
+            <div class="defender bg-danger text-white text-center rounded" style="top: 50px; left: 25%;">Def</div>
+            <div class="defender bg-danger text-white text-center rounded" style="bottom: 50px; left: 45%;">Def</div>
+            <div class="defender bg-danger text-white text-center rounded" style="top: 50px; left: 65%;">Def</div>
+            <div class="defender bg-danger text-white text-center rounded" style="bottom: 50px; left: 80%;">Def</div>
+            
+            <div id="endzone" class="end-zone bg-warning text-dark d-flex align-items-center justify-content-center">
+                <h2 class="m-0">RED ZONE</h2>
+            </div>
+        </div>
+
+        <div class="mt-3 text-center">
+            <button id="reset-btn" class="btn btn-secondary"><i class="bi bi-arrow-counterclockwise"></i> Reset</button>
+            <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#leaderboardModal">🏆 Leaderboard</button>
+            <button id="clear-leaderboard-btn" class="btn btn-danger"><i class="bi bi-trash"></i> Clear Scores</button>
+        </div>
+    </div>
+
+    <!-- Leaderboard Modal -->
+    <div class="modal fade" id="leaderboardModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title text-dark">Top Scores</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><ul id="score-list" class="list-group"></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 py-3 bg-light text-center">
+        <p class="mb-0">Developed by Yumin Choi | <a href="https://github.com/yumin628" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Full Game JS -->
+    <script src="assets/js/full.js"></script>
+</body>
+</html>
