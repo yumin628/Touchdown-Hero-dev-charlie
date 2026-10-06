@@ -7,7 +7,7 @@
 - Version 1.0.0
 
 ## user story 
-- **as a** football fan looking for a quick study break,
+- **as a** international student who recently got into American football,
 - **i want** to play a fast-paced drag-and-drop dodging game,
 - **so that** I can experience the thrill of scoring a touchdown and climbing the leaderboard.
 
